@@ -1,0 +1,19 @@
+@import 'nib'
+
+sans-serif = 'Helvetica', 'sans-serif'
+serif = 'Derivia', 'Georgia', 'serif'
+
+font-face(family, filename, style = normal, weight = normal)
+  @font-face
+    font-family family
+    font-weight weight
+    font-style style
+    src url("/fonts/" + filename + ".eot?#iefix") format("embedded-opentype")
+  @font-face
+    font-family family
+    font-weight weight
+    font-style style
+    src url("/fonts/" + filename + ".woff") format("woff"), url("/fonts/" + filename + ".ttf") format("truetype"), url("/fonts/" + filename + ".svg") format("svg")
+
+font-smoothing()
+  vendor('font-smoothing', arguments)

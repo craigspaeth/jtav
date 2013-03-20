@@ -9,7 +9,12 @@
   },
   "dependencies": {
     "underscore": "*",
-    "connect": "*"
+    "connect": "*",
+  	"nap": "*",
+  	"jade": "*",
+  	"nib": "*",
+  	"stylus": "*",
+  	"coffee-script": "*"
   },
   "scripts": {
     "start": "coffee app.coffee"

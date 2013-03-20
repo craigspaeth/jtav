@@ -1,0 +1,189 @@
+@import 'base'
+
+global-reset()
+
+font-face('Derivia', 'derivia')
+
+serif-m()
+  font-family serif
+  text-transform uppercase
+  font-size 18px
+  letter-spacing 3px
+
+html, body
+  min-height 100%
+
+body
+  padding-top 100px
+
+body, p
+  font-family sans-serif
+  line-height 1.8em
+  font-size 15px
+  color #222
+  
+a
+  color black
+  text-decoration none
+  border-bottom 1px solid
+  
+strong
+  font-weight bold
+
+h1
+  serif-m()
+  background-color #333333
+  color white
+  padding 20px 0 15px 0
+  font-size 24px
+
+h2, h3
+  serif-m()
+  font-weight bold
+  color black
+  text-align center
+  margin 40px 0
+  font-size 24px
+
+h3
+  font-size 17px
+  text-align left
+  &.p-header
+    font-size 20px
+    margin-bottom 10px
+  
+small.note
+  font-style italic
+  background left center no-repeat
+  padding-left 20px
+
+.container
+  width 1080px
+  margin auto
+  clearfix()
+  
+.left-half-col, .right-half-col
+  width 510px
+  h2
+    font-size 20px
+
+.left-half-col
+  float left
+
+.right-half-col
+  float right
+
+hr.ornate-divider
+  background none
+  border 0
+  border-top 1px solid #ccc
+  margin 40px 0 10px 0
+  text-align center
+  &::after
+    content '.'
+    color transparent
+    position relative
+    top -22px
+    z-index 2
+    width 120px
+    height 30px
+    display inline-block
+    background white no-repeat center center
+
+header#main-header
+  background-color black
+  color white
+  height 90px
+  padding 5px 0
+  position fixed
+  top 0
+  width 100%
+  z-index 3
+  nav
+    float right
+    padding-top 37px
+    a
+      color #ccc
+      serif-m()
+      border-bottom 0
+      cursor pointer
+      &.active, &:hover
+        color white
+      &:last-child
+        margin-right 0
+        &::after
+          display none
+      &::after
+        content '.'
+        color transparent
+        width 7px
+        height 8px
+        margin 0 20px 3px 20px
+        display inline-block
+#logo
+  width 145px
+  height 90px
+  margin-right 20px
+  float left
+#contact-info
+  font-size 12px
+  float right
+  padding 6px 0
+  line-height 1em
+  a
+    color #6a6a6a
+    margin-right 30px
+    border-bottom 0
+    &:hover
+      border-bottom 1px solid
+    &:last-child
+      margin-right 10px
+  .contact
+    float left
+    padding-top 4px
+#social-media
+  float right
+  li
+    width 20px
+    height @width
+    display block
+    float left
+    margin-left 15px
+    position relative
+    top -5px
+
+#procedures-list
+  font-smoothing anti-aliased
+  padding 20px 0 40px 0
+  background #333
+  line-height 2.2em
+  margin-top -1px
+  display none
+  ul > ul
+    width 240px
+    margin-right 20px
+    float left
+  li a
+    color white
+    border-bottom 0
+    padding-bottom 3px
+    &:hover
+      border-bottom 1px solid
+  lh
+    font-weight bold
+    color #aaa
+    font-size 13px
+    line-height 1.4em
+    display block
+    margin-bottom 10px
+
+#main_container
+  clearfix()
+
+footer
+  clear both
+  background black
+  padding 100px
+  width 100%
+  margin-top 200px
+  box-sizing border-box

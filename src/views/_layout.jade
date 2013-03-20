@@ -1,0 +1,43 @@
+doctype
+html
+  head
+    != nap.css('all')
+  body
+    header#main-header
+      .container
+        a#logo( href='/index.html' )
+        nav
+          a#about-link( href='/about.html' ) About
+          a#procedures-link Procedures
+          a Press / Testomonials
+          a Products
+          a Contact
+        #contact-info
+          .contact
+            a( href='mailto:jt@youngskinforever.com' ) jt@youngskinforever.com
+            a 905 Fifth Avenue, Suite 1C, New York, NY 10021
+            a 212-755-1155
+          ul#social-media
+            li.facebook
+            li.twitter
+            li.linked-in
+      #procedures-list
+        ul.container
+          ul
+            lh Non-Invasive Technologies for Skin Firming, Toning, & Tightening
+            li 
+              a( href='/procedures/ultherapy.html') Ultherapy
+            li Cutera Titan
+          ul
+            lh Non-Invasive Technologies for Skin Firming, Toning, & Tightening
+            li JTav Anti- aging Facial
+            li Gentle Renewal Facial
+            li HydraFacial
+            li 24kt Gold Facial
+            li Medical Facial
+    #main_container
+      block content
+    footer
+      .container
+    #scripts
+      != nap.js('all')

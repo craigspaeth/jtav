@@ -1,0 +1,59 @@
+// 
+// Home page
+// 
+
+@import 'base'
+
+#main-slideshow
+  height 365px
+  li, li .container
+    height 100%
+  li.main
+    background-color #222
+    .container
+      background url('/images/home/home-banner.jpg') no-repeat right center
+    p
+      padding 30px 600px 0 0
+      color white
+      font-size 26px
+      font-smoothing antialiased
+
+#main-slideshow-dots
+  text-align center
+  padding 10px 0
+  ul
+    display inline-block
+  li
+    width 11px
+    height @width
+    opacity 0.3
+    &.active
+      opacity 1
+      
+.home-about
+  clearfix()
+  img
+    float left
+    margin-right 20px
+    
+ul.featured-procedures
+  li
+    clearfix()
+    margin-bottom 40px
+  p
+    float right
+    width 360px
+  .name
+    float left
+    width 150px
+    text-align left
+    font-size 20px
+    color #777
+    padding-top 3px
+    
+#home-gmaps
+  width 252px
+  height 200px
+  display block
+  float left
+  margin-right 20px

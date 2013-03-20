@@ -1,0 +1,58 @@
+// 
+// About page
+// 
+
+@import 'base'
+
+.bio
+  margin 20px 0
+  img
+    width 360px
+    float left
+    margin-right 20px
+    margin-top 8px
+  p
+    margin-bottom 1em
+    .large-letter
+      font-family serif
+      font-size 82px
+      display block
+      float left
+      margin 35px 10px 10px 0
+
+ul.about-office-pics 
+  clearfix()
+  li
+    float left
+    height 286px
+    margin-right 20px
+    &:last-child
+      margin-right 0
+    img
+      height 100%
+
+#about-office-caption
+  text-align center
+  margin 15px 0
+  font-size 13px
+  line-height 1.6em
+
+.about-staff
+  margin-top 80px
+  
+.about-staff li
+  width 520px
+  margin-right 40px
+  float left
+  clearfix()
+  &:last-child
+    margin-right 0
+  img
+    float left
+    width 100px
+    border-radius @width
+  h3, p
+    float right
+    width 390px
+  h3
+    margin 0 0 10px 0

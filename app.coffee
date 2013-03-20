@@ -1,8 +1,38 @@
-http = require("http")
-http.createServer((req, res) ->
-  res.writeHead 200,
-    "Content-Type": "text/plain"
+connect = require 'connect'
+jade = require 'jade'
+fs = require 'fs'
+path = require 'path'
+global.nap = require 'nap'
 
-  res.end "Hello World\n"
-).listen 1337, "127.0.0.1"
-console.log "Server running at http://127.0.0.1:1337/"
+nap
+  assets:
+    css:
+      all: [
+        'src/styles/**/*.styl'
+      ]
+    js:
+      all: [
+        'src/scripts/vendor/google-maps-api.js'
+        'src/scripts/vendor/gmaps.js'
+        'src/scripts/vendor/jquery.js'
+        'src/scripts/**/*.coffee'
+      ]
+
+compileFld = (fld) ->
+  viewFld = "src/views/#{fld}"
+  for file in fs.readdirSync(viewFld) \
+      when path.extname(file) is '.jade' and file[0] isnt '_'
+    fs.writeFileSync "public/#{fld}#{file.split('.')[0]}.html", 
+      jade.compile(fs.readFileSync("#{viewFld}#{file}"),
+        pretty: true
+        filename: "#{viewFld}#{file}"
+      )() 
+
+app = connect()
+  .use(connect.logger('dev'))
+  .use(connect.static('public', maxAge: 0))
+  .use((req, res) ->
+    compileFld ''
+    compileFld 'procedures/'
+    res.end('')
+  ).listen 3000

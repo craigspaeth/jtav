@@ -1,0 +1,72 @@
+// 
+// Procedures styles
+// 
+
+@import 'base'
+
+.right-procedures-container
+  width 720px
+
+.procedures-h2
+  margin-top 70px
+  
+ul.instructions li
+  margin 1em 0
+  
+.procedures-slide-show-container
+  background black
+  text-align center
+  .container
+    position relative
+    padding 20px 0
+  ul.slide-show li
+    display block
+    margin-bottom 20px
+    &:not(.active)
+      display none
+    .img-container
+      display inline-block
+      clearfix()
+      img
+        display block
+        height 300px
+      .before-caption, .after-caption
+        color #777
+        width 50%
+        float left
+        text-transform uppercase
+        letter-spacing 2px
+        font-size 14px
+  ul.slide-show-dots 
+    display inline-block
+    clearfix()
+    li
+      width 16px
+      height @width
+      float left
+      margin-right 10px
+      background no-repeat center center
+      opacity 0.2
+      cursor pointer
+      transition opacity 0.3s ease-in
+      &.active
+        opacity 0.8
+      &:hover
+        opacity 0.5
+  .slide-show-arrow-left, .slide-show-arrow-right
+    position absolute
+    height 100%
+    top 0
+    width 100px
+    background #eee
+    cursor pointer
+    opacity 0.2
+    transition opacity 0.3s ease-in-out 
+    &:hover
+      opacity 0.6
+  .slide-show-arrow-left
+    left 0
+    background no-repeat left center
+  .slide-show-arrow-right
+    right 0
+    background no-repeat right center

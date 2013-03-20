@@ -4,8 +4,21 @@
 
 @import 'base'
 
-.right-procedures-container
+.left-procedures-container
   width 720px
+  float left
+
+.right-procedure-index
+  float right
+  padding-top 40px
+  h3, .index-items
+    padding-left 20px
+  h3
+    margin 0 0 10px 0
+  .index-items
+    border-left 1px solid #ccc
+    font-size 14px
+    color #777
 
 .procedures-h2
   margin-top 70px
@@ -48,7 +61,6 @@ ul.instructions li
       background no-repeat center center
       opacity 0.2
       cursor pointer
-      transition opacity 0.3s ease-in
       &.active
         opacity 0.8
       &:hover

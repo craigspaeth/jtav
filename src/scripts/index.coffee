@@ -10,8 +10,16 @@ index = ->
     
 about = ->
   $('#about-link').addClass 'active'
-  
+
+# 
+# Procedures
+# 
+
 procedures = ->
+  setupSlideShow()
+  setupPopLockRightIndex()
+
+setupSlideShow = ->
   
   showSlide = (i) ->
     $("ul.slide-show li:eq(#{i})")
@@ -34,7 +42,20 @@ procedures = ->
       nextSlide()
     else if e.which is rightArrow = 37
       prevSlide()
-    
+
+setupPopLockRightIndex = ->
+  
+  popLockIndex = ->
+    diff = $(window).scrollTop() + (headerHeight = 100) - 
+           $('.left-procedures-container').offset().top
+    $('.right-procedure-index').css "margin-top": if diff > 0 then diff else 0
+  
+  $(window).on 'scroll', popLockIndex
+  
+# 
+# Generic Setup
+# 
+  
 $ ->
   
   # Load page specific code

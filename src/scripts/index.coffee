@@ -72,7 +72,6 @@ setupPopLockRightIndex = ->
       .addClass('highlight').siblings().removeClass('highlight')
       
   onClickIndexItem = (e) ->
-    console.log "c!!!"
     $(window).scrollTop(
       $("[data-waypoint-index=#{$(e.target).index()}]").offset().top - HEADER_HEIGHT - 20
     )

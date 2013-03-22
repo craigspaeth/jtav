@@ -1,3 +1,12 @@
+# 
+# Global Constants
+# 
+HEADER_HEIGHT = 100
+
+# 
+# Home page
+#
+
 index = ->
   map = new GMaps
     div: '#home-gmaps'
@@ -7,6 +16,11 @@ index = ->
     lat: 40.772164
     lng: -73.967136
     title: 'JTav Clinical Skin Care'
+
+
+# 
+# About page
+# 
     
 about = ->
   $('#about-link').addClass 'active'
@@ -46,11 +60,26 @@ setupSlideShow = ->
 setupPopLockRightIndex = ->
   
   popLockIndex = ->
-    diff = $(window).scrollTop() + (headerHeight = 100) - 
+    diff = $(window).scrollTop() + HEADER_HEIGHT - 
            $('.left-procedures-container').offset().top
     $('.right-procedure-index').css "margin-top": if diff > 0 then diff else 0
-  
+    
+  highlightIndex = ->
+    for el in $('[data-waypoint-index]').toArray().reverse()
+      viewportTop = $(window).scrollTop() + HEADER_HEIGHT + 25
+      index = $(el).data('waypoint-index'); break if viewportTop > $(el).offset().top
+    $(".right-procedure-index .index-items > *:eq(#{index})")
+      .addClass('highlight').siblings().removeClass('highlight')
+      
+  onClickIndexItem = (e) ->
+    console.log "c!!!"
+    $(window).scrollTop(
+      $("[data-waypoint-index=#{$(e.target).index()}]").offset().top - HEADER_HEIGHT - 20
+    )
+    
   $(window).on 'scroll', popLockIndex
+  $(window).on 'scroll', highlightIndex
+  $('.right-procedure-index .index-items >  *').click onClickIndexItem
   
 # 
 # Generic Setup

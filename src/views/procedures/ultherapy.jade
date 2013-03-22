@@ -6,44 +6,56 @@ block content
   .procedures-slide-show-container
     .container
       ul.slide-show
+        li.active
+          iframe(
+            src='http://player.vimeo.com/video/60900294?title=0&amp;byline=0&amp;color=ffffff',
+            width='581',
+            height='327'
+            ,frameborder='0',
+            webkitallowfullscreen='',
+            mozallowfullscreen='',
+            allowfullscreen=''
+          )
         for val, i in new Array(16)
-          li( class=i == 0 ? 'active' : '')
+          li
             .img-container
               img( src='/images/procedures/ultherapy/before-after/#{i + 1}.jpg' )
               .before-caption Before
               .after-caption After
       ul.slide-show-dots
+        li.active
         for val, i in new Array(16)
-          li( class=i == 0 ? 'active' : '')
+          li
       .slide-show-arrow-left
       .slide-show-arrow-right
   .container
+    .about-top( data-waypoint-index=0 )
     .left-procedures-container
-      h3.p-header Ulthera
+      h3.p-header( data-waypoint-index=1 ) Ulthera
       p This FDA cleared technology uses the safe, time-tested energy of ultrasound to stimulate the 
         | deep structural support layers of the skin-including those typically addressed in a surgical 
         | facelift-without disturbing the surface of the skin. The Ulthera procedure is proven 
         | effective in targeting specific problem areas such as drooping eyebrows and lids, the 
         | jowl line, nasolabial folds and sagging skin on the lower and upper neck.
-      h3.p-header The Ultherapy Procedure
+      h3.p-header( data-waypoint-index=2 ) The Ultherapy Procedure
       p The procedure is performed in the office and does not require anesthesia. Sensation during 
         | the procedure varies and is typically mild.  Treatment takes approximately 30-60 minutes 
         | during which time you can see your skin and deeper tissues on the screen! There is no 
         | downtime after the procedure and normal activities, including exercise, can be resumed 
         | immediately. Occasionally, there may be minor redness, tingling, or tenderness in the 
         | treated area which is temporary.
-      h3.p-header The Results
+      h3.p-header( data-waypoint-index=3 ) The Results
       p In properly selected individuals, a noticeable and natural toning and firming of the skin 
         | will occur. The results are long lasting, but may change in time as your body continues 
         | to age. Following treatment, you may notice a short-term "boost" but the natural process 
         | of creating new, more elastic, collagen builds over time-much like the effect that exercise 
         | has on building muscle (but without the multiple workouts!).  Results will unfold over the 
         | course of 3-4 Months.
-      h3.p-header Best Candidates
+      h3.p-header( data-waypoint-index=4 ) Best Candidates
       p This treatment is appropriate for individuals who have mild to moderate skin looseness, 
         | volume loss, or sagging. This procedure is not a substitute for surgery and will not 
         | achieve equivalent results to surgery.
-      h2.procedures-h2 Post Treatement Instructions
+      h2.procedures-h2( data-waypoint-index=5 ) Post Treatement Instructions
       hr.ornate-divider
       ul.instructions
         li Wash Skin with Cool Water and a gentle cleanser
@@ -58,9 +70,8 @@ block content
       h3 Ultherapy
       .index-items
         h4 About the procedure
-        ul
-          li Ulthera
-          li The Ultherapy Procedure
-          li The Results
-          li The Candidates
+        h5 Ulthera
+        h5 The Ultherapy Procedure
+        h5 The Results
+        h5 The Candidates
         h4 Post treatment instructions

@@ -1,0 +1,72 @@
+// 
+// Press/Testomonials styles
+// 
+
+@import 'base'
+
+li.testomonial
+  p.quote
+    font-size 18px
+    font-style italic
+  .testomonial-left
+    float left
+    img
+      border-radius 50px
+      width 90px
+  .testomonial-right
+    float right
+    width 380px
+  .testomonial-name
+    serif-m()
+    text-align right
+    font-size 16px
+  small
+    font-size 11px
+    color #777
+    text-transform uppercase
+    letter-spacing 1px
+    text-align right
+    display block
+
+.testomonials
+  margin-top 40px
+  clearfix()
+  
+.press-left
+  width 180px
+  float left
+  img
+    width 100%
+
+li.testomonial, li.press
+  width 500px
+  float left
+  clearfix()
+  &:nth-child(2)
+    margin-left 80px
+
+.press-left
+  margin-right 20px
+
+.press-title
+  serif-m()
+  font-size 16px
+
+.celeb-divider
+  clear both
+  margin 80px 0
+  border-bottom 1px solid #ccc
+  padding-bottom 20px
+  p
+    text-align center
+    font-size 13px
+    color #777
+  ul.celebs
+    line-height 2em
+    serif-m()
+    clearfix()
+    li
+      float left
+      text-align center
+      width 270px
+      font-size 16px

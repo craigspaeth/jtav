@@ -1,0 +1,55 @@
+extends ../_layout
+
+block content
+  .about-top( data-waypoint-index=0 )
+  h1
+    .container Procedures / Laser Hair Removal
+  .procedures-slide-show-container
+    .container
+      ul.slide-show
+        for val, i in new Array(2)
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/laser-hair-removal/before-after/#{i + 1}.jpg' )
+      ul.slide-show-dots
+        for val, i in new Array(2)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
+  .container
+    .left-procedures-container
+      h3.p-header( data-waypoint-index=1 ) About the procedure
+      p 
+        strong For Women & Men of All Skin Types and Tones
+      p At JTav Clinical Skin and Laser Center, laser hair removal is a safe and simple procedure. First your shaved skin is gently cleaned. Your skin is assessed and tested by our professional personnel prior to actual treatment to ensure maximum results. Then, an individually programmable laser or intense pulsed light handset is run over the area. The light energy passes through the skin to the pigment in the hair follicle where it is absorbed. Within two to three weeks those hairs which were in the active growth phase during treatment and absorbed the light energy are permanently eliminated and fall out. At the follow-up treatments which are timed to coincide with the next active growth phase, the remaining hair follicles are disabled leaving you with silky smooth skin.
+      h2.procedures-h2( data-waypoint-index=2 ) Treatment Technologies
+      hr.ornate-divider
+      h3.p-header( data-waypoint-index=3 ) CoolGlide™ Laser Hair Removal
+      p The CoolGlide™ system was the first 1064 nm Nd:YAG system approved for use on all skin types (including African-American) and tanned skin, allowing treatment of a wider patient base than other systems. The proprietary PowerFlex™ Technology allows independent control of pulse width (duration of the laser impulse) and fluence (power level) thus permitting effective treatment on a range of hair thicknesses, including the often difficult-to-treat finer hairs that are left by other systems after a number of treatments.
+      h3.p-header( data-waypoint-index=4 ) ProWave 770™ Hair Removal
+      p Cutera again leads the field with the first programmable wavelength light source for hair removal. This unique device allows the professionals at Mona Spa and Laser Center to select the optimal settings for your hair and skin type. A basic principle of light and laser treatments is the longer the wavelength, the greater depth of penetration into the skin you will obtain at a given power level. Because the ProWave 770™ delivers a range of wavelengths (all of which are absorbed by the hair pigmen), hair follicles at different depths in the dermis can be effectively targeted using lower energy settings than previously required. Combining this with the most advanced contact cooling technology available protects the skin from the heat generated when the hair absorbs the light energy, and allows the Mona Spa and Laser Center  professionals to offer the safest, most comfortable, and effective means to remove unwanted hair.
+      h2.procedures-h2( data-waypoint-index=5 ) Frequently Asked Questions
+      hr.ornate-divider
+      h3.p-header( data-waypoint-index=5 ) What do CoolGlide treatments feel like?
+      p As the name implies, the CoolGlide handpiece cools and soothes as it glides along your skin. When the pulse of light is delivered, some patients experience a mild pinching or stinging sensation. No local anesthesia or pain medication is typically required; however some clients may prefer to use a topical anesthetic when sensitive areas are treated.
+      h3.p-header( data-waypoint-index=6 ) How many treatments will I need?
+      p Most areas require 4 - 8  treatments. However, the number of CoolGlide treatments required for optimal long-term benefits depends on multiple factors - hair thickness, the area treated and your hair's growth cycle. Interestingly, not all hairs are actively growing at the same time and actually go through three distinct phases: growth, regression, and resting. CoolGlide treatments work by disabling the hair that is principally in the active growth phase at the time of treatment. Since other hairs will enter this active growth phase at different times, additional treatments may be necessary to disable all of the hair follicles in a given area.
+      h3.p-header( data-waypoint-index=7 ) What happens after the treatment?
+      p Immediately following your CoolGlide treatment, the area may appear a bit red and swollen. Three to seven days after treatment you may experience what seems to be regrowth of hair. Actually, most of these hairs are being shed as a result of your treatment and are not regrowing. Between treatments you should not wax or pluck your hair, but it is permissible to shave.
+      h3.p-header( data-waypoint-index=8 ) What are the possible side effects?
+      p Although clients experience few side effects, the most commonly noticed are slight reddening and local swelling of the skin, similar to a sunburn. These effects typically last for several hours or less. In rare instances, blistering can occur. 
+      h3.p-header( data-waypoint-index=9 ) How does the CoolGlide compare with electrolysis?
+      p Electrolysis is a tedious, invasive, and painful process that involves inserting a needle into each individual hair follicle and delivering an electrical charge to them one at a time. Electrolysis often requires years of treatments at regular intervals. By delivering light energy to hundreds of hair follicles at a time, the CoolGlide effectively treats an area in just seconds that would take over an hour with electrolysis.
+    .right-procedure-index
+      h3 Laser Hair Removal
+      .index-items
+        h4 About the procedure
+        h4 Treatment Technologies
+        h5 Coolglid™ Laser Hair Removal
+        h5 Prowave 770™ Hair Removal
+        h4 FAQs
+        h5 What do Coolglid treatements feel like?
+        h5 How many treatements will I need?
+        h5 What happens after the treatment?
+        h5 What are the possible side effects?
+        h5 How does the Coolglide compare with Electrolysis?

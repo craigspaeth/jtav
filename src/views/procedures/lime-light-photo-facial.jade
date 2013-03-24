@@ -1,0 +1,44 @@
+extends ../_layout
+
+block content
+  .about-top( data-waypoint-index=0 )
+  h1
+    .container Procedures / LimeLight Photo Facial
+  .procedures-slide-show-container
+    .container
+      ul.slide-show
+        for val, i in new Array(3)
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/lime-light-photo-facial/before-after/#{i + 1}.jpg' )
+              .before-caption Before
+              .after-caption After
+      ul.slide-show-dots
+        for val, i in new Array(3)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
+  .container
+    .left-procedures-container
+      h3.p-header( data-waypoint-index=1 ) About the Procedure
+      p The Limelight Photofacial is a new, non-invasive approach to skin rejuvenation using 
+        | Cutera’s Limelight.  The procedure offers the advantage of improving skin tone and 
+        | surface imperfections associated with aging and photodamage.
+      p The Limelight Facial is ideal for any part of your face, neck and décolleté with skin 
+        | redness, telangiectasia (tiny veins) or brown spots.  Light (low contrast) brown spots, 
+        | which were previously difficult to resolve, respond very well to treatment. 
+        | Joie Tavernise will customize your Limelight facial to your skin type and 
+        | selectively treat the brown and/or red pigmented areas on your skin. 
+        | It’s the heating of the pigmented brown or red cells that causes the therapeutic effect.   
+      p When the pulse of light is delivered, patients will experience a mild pinching sensation. 
+        | A special gel is used to cool the skin before the treatment to help relieve any momentary 
+        | discomfort.  Treatment time depends on the size and number of areas treated, but 
+        | generally takes under one hour.
+      p One to three treatments are usually sufficient to see results.  Additional treatments 
+        | may be recommended for excessively sun damaged skin.  Following treatment, brown spots 
+        | will immediately darken and your skin may appear slightly red.  Any slight redness 
+        | will dissipate within a couple of hours.  Within one to three weeks, the darkened spots 
+        | will flake off and fade.  Diffuse redness or telangiectasia will decrease and your 
+        | mottled complexion will improve.
+      p To avoid new brown spots, telangiectasia and diffuse redness, remember to always apply 
+        | broad-spectrum sunscreen when outdoors. 

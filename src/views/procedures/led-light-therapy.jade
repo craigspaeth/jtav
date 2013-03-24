@@ -1,0 +1,24 @@
+extends ../_layout
+
+block content
+  h1
+    .container Procedures / LED  Light Therapy
+  .procedures-slide-show-container
+    .container
+      ul.slide-show
+        for val, i in new Array(2)
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/led-light-therapy/before-after/#{i + 1}.jpg' )
+              .before-caption Before
+              .after-caption After
+      ul.slide-show-dots
+        for val, i in new Array(2)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
+  .container
+    .left-procedures-container
+      .about-top( data-waypoint-index=0 )
+      h3.p-header( data-waypoint-index=1 ) About the procedure
+      p LED is a non-invasive approach that harnesses light energy to rejuvenate the skin. Infrared LED light therapy can assist in the repair of acne and blemishes because it stimulates the skin’s natural healing process. This treatment is effective in the removal of brown spots, broken capillaries, spider veins and facial redness. The treatment is painless, and has no downtime

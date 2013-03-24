@@ -1,0 +1,24 @@
+extends ../_layout
+
+block content
+  h1
+    .container Procedures / Laser Genesis Scar Revision & Skin Smoothing
+  .procedures-slide-show-container
+    .container
+      ul.slide-show
+        for val, i in new Array(2)
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/laser-genesis/before-after/#{i + 1}.jpg' )
+              .before-caption Before
+              .after-caption After
+      ul.slide-show-dots
+        for val, i in new Array(2)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
+  .container
+    .left-procedures-container
+      .about-top( data-waypoint-index=0 )
+      h3.p-header( data-waypoint-index=1 ) About the procedure
+      p Restore your skin’s youthful glow by smoothing out uneven texture and tone. The Laser Genesis utilizes non-invasive laser technology to safely and effectively treat lines, wrinkles, large pores, uneven skin texture, sun damage and scarring. Using infrared energy, laser genesis warms the dermis under your skin stimulating collagen growth. (series of 3 for best results).

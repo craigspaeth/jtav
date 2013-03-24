@@ -1,6 +1,7 @@
 # 
 # Global Constants
 # 
+
 HEADER_HEIGHT = 100
 
 # 
@@ -56,14 +57,19 @@ setupSlideShow = ->
       nextSlide()
     else if e.which is rightArrow = 37
       prevSlide()
+  $('ul.slide-show-dots li').click -> showSlide $(@).index()
 
 setupPopLockRightIndex = ->
   
   popLockIndex = ->
-    diff = $(window).scrollTop() + HEADER_HEIGHT - 
-           $('.left-procedures-container').offset().top
-    $('.right-procedure-index').css "margin-top": if diff > 0 then diff else 0
-    
+    proceduresFloor = $('.left-procedures-container').height() - 
+                      $('.right-procedure-index').height()
+    pxFromTop = $(window).scrollTop() + HEADER_HEIGHT - 
+                $('.left-procedures-container').offset().top
+    $('.right-procedure-index').css(
+      "margin-top": Math.max Math.min(pxFromTop, proceduresFloor), 0
+    )
+  
   highlightIndex = ->
     for el in $('[data-waypoint-index]').toArray().reverse()
       viewportTop = $(window).scrollTop() + HEADER_HEIGHT + 25

@@ -6,6 +6,8 @@
 
 .left-procedures-container
   width 720px
+  padding-right 40px
+  box-sizing border-box
   float left
 
 .right-procedure-index
@@ -49,13 +51,18 @@ ul.instructions li
       img
         display block
         height 300px
-      .before-caption, .after-caption
+        margin auto
+        &.large
+          height 400px
+      .before-caption, .after-caption, .caption
         color #777
         width 50%
         float left
         text-transform uppercase
         letter-spacing 2px
         font-size 14px
+      .caption
+        width 100%
   ul.slide-show-dots 
     display inline-block
     clearfix()
@@ -69,7 +76,7 @@ ul.instructions li
       cursor pointer
       &.active
         opacity 0.8
-      &:hover
+      &:hover:not(.active)
         opacity 0.5
   .slide-show-arrow-left, .slide-show-arrow-right
     position absolute

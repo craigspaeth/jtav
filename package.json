@@ -1,20 +1,20 @@
 {
   "name": "jtav",
   "subdomain": "jtav",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "private": true,
   "engines": {
-    "node": "0.10.x",
+    "node": "0.8.x",
     "npm": "1.1.x"
   },
   "dependencies": {
     "underscore": "*",
     "connect": "*",
-  	"nap": "*",
-  	"jade": "*",
-  	"nib": "*",
-  	"stylus": "*",
-  	"coffee-script": "*"
+    "nap": "*",
+    "jade": "*",
+    "nib": "*",
+    "stylus": "*",
+    "coffee-script": "*"
   },
   "scripts": {
     "start": "coffee app.coffee"

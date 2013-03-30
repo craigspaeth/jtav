@@ -1,16 +1,33 @@
 extends _layout
 
 block content
-  ul#main-slideshow
-    li.main
+  ul#main-slideshow.slide-show
+    li.main.active
       .container
         p Restore & maintain your youthful appearance at 
           strong JTav Clinical Skin Care 
           | with our state of the art equipment and anti-aging products.
+    li.led-treatment
+      .container
+        p 
+          strong LightStim LED Salon Treatment 
+          | enhances the benefits of skin care by facilitating deeper absorption of ingredients 
+          | known to hydrate, nourish and repair the skin.
+          br
+          a.read-more( href='procedures/ultherapy.html') Read more
+    li.ultherapy
+      .container
+        p 
+          strong Ulthera 
+          | works deep below the covering blanket of skin - delivering droplets of precise energy to stimulate collagen renewal - to rejuvenate the face.
+          br
+          a.read-more( href='procedures/ultherapy.html') Read more
   .container
     #main-slideshow-dots
-      ul
+      ul.slide-show-dots
         li.active
+        li
+        li
     .left-half-col
       .home-about
         h2 About Joie Tavernise

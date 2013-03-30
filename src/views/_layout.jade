@@ -1,52 +1,3 @@
-mixin procedures
-  .procedures-list-container
-    ul.container
-      ul
-        lh Non-Invasive Technologies for Skin Firming, Toning, & Tightening
-        li 
-          a( href='/procedures/ultherapy.html') Ultherapy
-        li
-          a( href='/procedures/cutera-titan.html') Cutera Titan
-      ul
-        lh Non-Invasive Technologies for Skin Firming, Toning, & Tightening
-        li 
-          a( href='/procedures/jtav-anti-aging-facial.html' ) JTav Anti- aging Facial
-        li
-          a( href='/procedures/gentle-renewal-facial.html' ) Gentle Renewal Facial
-        li
-          a( href='/procedures/hydra-facial.html' ) HydraFacial
-        li
-          a( href='/procedures/gold-facial.html' ) 24kt Gold Facial
-        li 
-          a( href='/procedures/medical-facial.html' ) Medical Facial
-      ul
-        lh Anti-Aging, Sun Damage Skin, and Wrinkles
-        li
-          a( href='/procedures/lime-light-photo-facial.html' ) LimeLight Photo Facial
-        li
-          a( href='/procedures/led-light-therapy.html' ) LED Light Therapy
-        li
-          a( href='/procedures/cosmelan-depigmentation-mask.html' ) Cosmelan De-pigmentation Mask
-        li
-          a( href='/procedures/chemical-peels.html' ) Chemical Peels
-        li
-          a( href='/procedures/body-peel-treatment.html' ) Smoothing Body Peel Treatment
-        li
-          a( href='/procedures/deep-wrinkle-treatment.html' ) Deep Wrinkle Treatment
-        li
-          a( href='/procedures/hand-rejuvenation.html' ) Hand Rejuvenation
-      ul
-        lh Advanced Laser and Skin Resurfacing
-        li
-          a( href='/procedures/laser-hair-removal.html' ) Laser Hair Removal
-        li
-          a( href='/procedures/laser-genesis.html' ) Laser Genesis Scar Revision & Skin Smoothing
-        li
-          a( href='/procedures/laser-vein-removal.html' ) Laser Vein Therapy for the Face and Body
-        
-        li
-          a( href='/procedures/fractora.html' ) Fractora
-
 doctype
 html
   head
@@ -70,12 +21,11 @@ html
             li.twitter
             li.linked-in
       #procedures-list
-        mixin procedures
+        include _procedures
     #main_container
       block content
     footer
       .container
-        mixin procedures
         .contact
           a( href='mailto:jt@youngskinforever.com' ) jt@youngskinforever.com
           span 905 Fifth Avenue, Suite 1C, New York, NY 10021

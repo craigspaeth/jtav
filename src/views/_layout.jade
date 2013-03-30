@@ -5,21 +5,24 @@ html
   body
     header#main-header
       .container
-        a#logo( href='/index.html' )
+        a#logo( href='index.html' )
         nav
-          a#about-link( href='/about.html' ) About
+          a#about-link( href='about.html' ) About
           a#procedures-link Procedures
-          a#press-testomonials-link( href='/press-testomonials.html' ) Press / Testomonials
-          a#contact-link( href='/contact.html' ) Contact
+          a#press-testomonials-link( href='press-testomonials.html' ) Press / Testomonials
+          a#contact-link( href='contact.html' ) Contact
         #contact-info
           .contact
             a( href='mailto:jt@youngskinforever.com' ) jt@youngskinforever.com
             span 905 Fifth Avenue, Suite 1C, New York, NY 10021
             span 212-755-1155
           ul#social-media
-            li.facebook
-            li.twitter
-            li.linked-in
+            li
+              a.facebook( href='https://www.facebook.com/pages/JTav-Clinical-Skin-Care-Laser-Center/190105831622', target='_blank' )
+            li
+              a.twitter( href='https://twitter.com/jtavclinical', target='_blank' )
+            li
+              a.youtube( href='http://www.youtube.com/channel/UCY9HR-pTA09m1UIt27VKLYw', target='_blank' )
       #procedures-list
         include _procedures
     #main_container

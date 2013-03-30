@@ -161,14 +161,20 @@ body.moz header#main-header nav a::after
 #social-media
   float right
   li
+    float left
+  a
     width 20px
     height @width
     display block
-    float left
     margin-left 15px
     position relative
     top -5px
-
+    opacity 0.4
+    transition opacity 0.3s
+    &:hover
+      border-bottom 0
+      opacity 0.8
+      
 #procedures-list
   display none
 

@@ -32,7 +32,6 @@ app = connect()
   .use(connect.logger('dev'))
   .use(connect.static('public', maxAge: 0))
   .use((req, res) ->
-    console.log 'MOOOO'
     compileFld ''
     compileFld 'procedures/'
     res.end('')

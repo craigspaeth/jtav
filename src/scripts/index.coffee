@@ -85,7 +85,27 @@ setupPopLockRightIndex = ->
   $(window).on 'scroll', popLockIndex
   $(window).on 'scroll', highlightIndex
   $('.right-procedure-index .index-items >  *').click onClickIndexItem
-  
+
+# 
+# Press / Testomonials
+# 
+pressTestomonials = ->
+  $('#press-testomonials-link').addClass 'active'
+
+
+# 
+# Contact
+# 
+contact = ->
+  map = new GMaps
+    div: '#contact-gmaps'
+    lat: 40.772164
+    lng: -73.967136
+  map.addMarker
+    lat: 40.772164
+    lng: -73.967136
+    title: 'JTav Clinical Skin Care'
+
 # 
 # Generic Setup
 # 
@@ -96,6 +116,8 @@ $ ->
   index() if window.location.pathname.match /index/
   about() if window.location.pathname.match /about/
   procedures() if window.location.pathname.match /procedures/
+  pressTestomonials() if window.location.pathname.match /press-test/
+  contact() if window.location.pathname.match /contact/
   
   # Procedures dropdown
   $('#procedures-link').click -> $("#procedures-list").toggle()

@@ -112,6 +112,12 @@ contact = ->
   
 $ ->
   
+  # Attach browser targeting class to body
+  $('body').addClass if navigator.userAgent.match /Firefox/
+                       'moz'
+                     else if navigator.userAgent.match /WebKit/
+                       'webkit'
+  
   # Load page specific code
   index() if window.location.pathname.match /index/
   about() if window.location.pathname.match /about/

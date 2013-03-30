@@ -99,6 +99,9 @@ hr.ornate-divider
     height 30px
     display inline-block
     background white no-repeat center center
+body.moz hr.ornate-divider
+  margin 40px 0
+
 
 header#main-header
   background-color black
@@ -130,6 +133,10 @@ header#main-header
         height 8px
         margin 0 20px 3px 20px
         display inline-block
+body.moz header#main-header nav a::after
+  position relative
+  top 8px
+  
 #logo
   width 145px
   height 90px
@@ -190,7 +197,9 @@ header#main-header
     line-height 1.4em
     display block
     margin-bottom 10px
-
+body.moz .procedures-list-container
+  margin-top -3px
+  
 #main_container
   clearfix()
 

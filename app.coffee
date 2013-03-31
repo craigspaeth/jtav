@@ -5,6 +5,7 @@ path = require 'path'
 global.nap = require 'nap'
 
 nap
+  mode: 'production'
   assets:
     css:
       all: [
@@ -28,11 +29,14 @@ compileFld = (fld) ->
         filename: "#{viewFld}#{file}"
       )() 
 
-app = connect()
-  .use(connect.logger('dev'))
-  .use(connect.static('public', maxAge: 0))
-  .use((req, res) ->
-    compileFld ''
-    compileFld 'procedures/'
-    res.end('')
-  ).listen 3000
+nap.package ->
+  app = connect()
+    .use(connect.logger('dev'))
+    .use(connect.static('public', maxAge: 0))  
+  # app.use((req, res) ->
+  #     compileFld ''
+  #     compileFld 'procedures/'
+  #     res.end('')
+  #   )
+  app.listen 3000
+  console.log "Listening on 3000"

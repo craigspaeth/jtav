@@ -119,11 +119,11 @@ $ ->
                        'webkit'
   
   # Load page specific code
-  index() if window.location.pathname.match /index/
-  about() if window.location.pathname.match /about/
-  procedures() if window.location.pathname.match /procedures/
-  pressTestomonials() if window.location.pathname.match /press-test/
-  contact() if window.location.pathname.match /contact/
+  index() if location.pathname.match(/index/) or location.pathname is '/'
+  about() if location.pathname.match /about/
+  procedures() if location.pathname.match /procedures/
+  pressTestomonials() if location.pathname.match /press-test/
+  contact() if location.pathname.match /contact/
   
   # Procedures dropdown
   $('#procedures-link').click -> $("#procedures-list").toggle()

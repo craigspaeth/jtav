@@ -19,6 +19,9 @@ header#main-header nav a::after {
 #social-media .youtube {
   background: url("/images/youtube.png") no-repeat right bottom !important;
 }
+#social-media .linked-in {
+  background: url("/images/linked-in.png") no-repeat right bottom !important;
+}
 #main-slideshow-dots li {
   background-image: url("/images/diamond-slideshow.png") !important;
 }

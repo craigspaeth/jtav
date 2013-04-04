@@ -3,7 +3,6 @@ path = require 'path'
 jade = require 'jade'
 global.nap = require './nap'
 
-
 module.exports = (fld) ->
   viewFld = "src/views/#{fld}"
   for file in fs.readdirSync(viewFld) \

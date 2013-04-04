@@ -117,6 +117,8 @@ $ ->
                        'moz'
                      else if navigator.userAgent.match /WebKit/
                        'webkit'
+                     else if navigator.userAgent.match /MSIE/
+                       'msie'
   
   # Load page specific code
   index() if location.pathname.match(/index/) or location.pathname is '/'

@@ -1,0 +1,40 @@
+.left-contact-info {
+  margin: 30px 67px 0 0;
+  float: left;
+}
+.left-contact-info p {
+  font-size: 17px;
+}
+ul.hours {
+  font-size: 13px;
+}
+ul.hours li {
+  zoom: 1;
+}
+ul.hours li:before,
+ul.hours li:after {
+  content: "";
+  display: table;
+}
+ul.hours li:after {
+  clear: both;
+}
+ul.hours .day,
+ul.hours .hrs {
+  float: left;
+}
+ul.hours .day {
+  width: 90px;
+}
+ul.hours small {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+}
+#contact-gmaps {
+  float: right;
+  margin-top: 30px;
+  width: 700px;
+  height: 400px;
+  background: #f2f2f2;
+}

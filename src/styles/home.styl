@@ -31,11 +31,16 @@
       color white
     .container
       background url('/images/home/home-banner.jpg') no-repeat right center
-  li.led-treatment
+  li.led-treatment, li.solo-girl
     background-color white
     border-bottom 1px solid #ccc
     .container
       background url('/images/home/led-treatment.jpg') no-repeat right bottom
+  li.solo-girl
+    p
+      padding 30px 300px 0 0
+    .container
+      background url('/images/home/solo-girl.jpg') no-repeat right 20px
   li.ultherapy
     background url('/images/home/ultherapy.jpg') center bottom
     background-size 100% auto
@@ -69,6 +74,16 @@
   img
     float left
     margin-right 20px
+    width 240px
+    &.float-right
+      float right
+      margin-right 0
+      margin-left 20px
+  .solo-girl
+    margin-top 40px
+    img
+      float right
+      width 150px
     
 ul.featured-procedures
   li

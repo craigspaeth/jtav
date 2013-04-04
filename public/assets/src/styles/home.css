@@ -1,0 +1,166 @@
+#main-slideshow {
+  height: 365px;
+  position: relative;
+}
+#main-slideshow p {
+  padding: 30px 600px 0 0;
+  font-size: 26px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+#main-slideshow a.read-more {
+  color: #000;
+}
+#main-slideshow li {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  -ms-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  z-index: -1;
+}
+#main-slideshow li.active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  z-index: 1;
+}
+#main-slideshow li,
+#main-slideshow li .container {
+  height: 100%;
+}
+#main-slideshow li.main {
+  background-color: #222;
+}
+#main-slideshow li.main p {
+  color: #fff;
+}
+#main-slideshow li.main .container {
+  background: url("/images/home/home-banner.jpg") no-repeat right center;
+}
+#main-slideshow li.led-treatment,
+#main-slideshow li.solo-girl {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#main-slideshow li.led-treatment .container,
+#main-slideshow li.solo-girl .container {
+  background: url("/images/home/led-treatment.jpg") no-repeat right bottom;
+}
+#main-slideshow li.solo-girl p {
+  padding: 30px 300px 0 0;
+}
+#main-slideshow li.solo-girl .container {
+  background: url("/images/home/solo-girl.jpg") no-repeat right 20px;
+}
+#main-slideshow li.ultherapy {
+  background: url("/images/home/ultherapy.jpg") center bottom;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  background-size: 100% auto;
+  min-width: 1000px;
+}
+#main-slideshow li.ultherapy p {
+  padding: 30px 0 0 600px;
+  color: #fff;
+  text-align: right;
+}
+#main-slideshow li.ultherapy p a {
+  color: #fff;
+}
+#main-slideshow-dots {
+  text-align: center;
+  padding: 10px 0;
+}
+#main-slideshow-dots ul {
+  display: inline-block;
+}
+#main-slideshow-dots li {
+  width: 11px;
+  height: 11px;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  float: left;
+  margin-right: 7px;
+  cursor: pointer;
+}
+#main-slideshow-dots li:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+#main-slideshow-dots li.active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.home-about {
+  zoom: 1;
+}
+.home-about:before,
+.home-about:after {
+  content: "";
+  display: table;
+}
+.home-about:after {
+  clear: both;
+}
+.home-about img {
+  float: left;
+  margin-right: 20px;
+  width: 240px;
+}
+.home-about img.float-right {
+  float: right;
+  margin-right: 0;
+  margin-left: 20px;
+}
+.home-about .solo-girl {
+  margin-top: 40px;
+}
+.home-about .solo-girl img {
+  float: right;
+  width: 150px;
+}
+ul.featured-procedures li {
+  zoom: 1;
+  margin-bottom: 40px;
+}
+ul.featured-procedures li:before,
+ul.featured-procedures li:after {
+  content: "";
+  display: table;
+}
+ul.featured-procedures li:after {
+  clear: both;
+}
+ul.featured-procedures p {
+  float: right;
+  width: 360px;
+}
+ul.featured-procedures .name {
+  float: left;
+  width: 150px;
+  text-align: left;
+  font-size: 20px;
+  color: #777;
+  padding-top: 3px;
+  border-bottom: 0;
+}
+#home-gmaps {
+  width: 252px;
+  height: 200px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+}

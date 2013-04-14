@@ -98,7 +98,7 @@ li.press:nth-child(2n+2) {
 }
 .celeb-divider {
   clear: both;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
 }

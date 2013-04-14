@@ -1,7 +1,7 @@
 module.exports = nap = require 'nap'
 
 nap
-  mode: 'development'
+  mode: 'production'
   assets:
     css:
       all: [

@@ -3,6 +3,20 @@ extends ../_layout
 block content
   h1
     .container Procedures / HydraFacial
+  .procedures-slide-show-container
+    .container
+      ul.slide-show
+        for val, i in new Array(3)
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/hydrafacial/before-after/#{i + 1}.jpg' )
+              .before-caption Before
+              .after-caption After
+      ul.slide-show-dots
+        for val, i in new Array(3)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
   .container
     .left-procedures-container
       .about-top( data-waypoint-index=0 )

@@ -7,10 +7,23 @@ block content
   .procedures-slide-show-container
     .container
       ul.slide-show
-        li.active
-          .img-container
-            img.large( src='/images/procedures/chemical-peels/patient.jpg' )
-            .caption Actual PCA Peel Patient
+        for i in [0,1]
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/chemical-peels/before-after/#{i + 1}.jpg' )
+              .before-caption Before Vitalize Peel
+              .after-caption After Vitalize Peel
+        for i in [2,3]
+          li
+            .img-container
+              img( src='/images/procedures/chemical-peels/before-after/#{i + 1}.jpg' )
+              .before-caption Before Rejuvenize Peel
+              .after-caption After Rejuvenize Peel
+      ul.slide-show-dots
+        for val, i in new Array(3)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
   .container
     .left-procedures-container
       h3.p-header( data-waypoint-index=1 ) About the procedure

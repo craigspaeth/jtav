@@ -4,6 +4,20 @@ block content
   .about-top( data-waypoint-index=0 )
   h1
     .container Procedures / Cosmelan De-pigmentation Mask
+  .procedures-slide-show-container
+    .container
+      ul.slide-show
+        for val, i in new Array(4)
+          li( class=i == 0 ? 'active' : '' )
+            .img-container
+              img( src='/images/procedures/cosmelan-de-pigmentation-mask/before-after/#{i + 1}.jpg' )
+              .before-caption Before
+              .after-caption After
+      ul.slide-show-dots
+        for val, i in new Array(4)
+          li( class=i == 0 ? 'active' : '' )
+      .slide-show-arrow-left
+      .slide-show-arrow-right
   .container
     .left-procedures-container
       h3.p-header( data-waypoint-index=1 ) About the procedure

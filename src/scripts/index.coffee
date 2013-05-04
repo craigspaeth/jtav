@@ -87,9 +87,9 @@ setupPopLockRightIndex = ->
   $('.right-procedure-index .index-items >  *').click onClickIndexItem
 
 # 
-# Press / Testomonials
+# Press / Testimonials
 # 
-pressTestomonials = ->
+pressTestimonials = ->
   $('#press-testomonials-link').addClass 'active'
 
 
@@ -124,7 +124,7 @@ $ ->
   index() if location.pathname.match(/index/) or location.pathname is '/'
   about() if location.pathname.match /about/
   procedures() if location.pathname.match /procedures/
-  pressTestomonials() if location.pathname.match /press-test/
+  pressTestimonials() if location.pathname.match /press-test/
   contact() if location.pathname.match /contact/
   
   # Procedures dropdown

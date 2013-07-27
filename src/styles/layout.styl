@@ -3,10 +3,10 @@
 global-reset()
 
 font-face('Derivia', 'derivia')
+container-width = 1080px
 
 html, body
   min-height 100%
-  background black
 
 body
   padding-top 100px
@@ -71,7 +71,7 @@ small.note
   padding-left 20px
 
 .container
-  width 1080px
+  width container-width
   margin auto
   clearfix()
   
@@ -236,3 +236,11 @@ footer
       color #6a6a6a
       &:last-child
         margin-right 60px
+
+// IPad Styles
+body.ipad
+  padding-top 0 !important
+  #main_container, footer, #main-header, html, body, .container
+    width container-width !important
+  header#main-header
+    position relative !important

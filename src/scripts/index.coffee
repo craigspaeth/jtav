@@ -119,6 +119,22 @@ $ ->
                        'webkit'
                      else if navigator.userAgent.match /MSIE/
                        'msie'
+  $('body').addClass 'ipad' if navigator.userAgent.match /iPad/i
+  
+  # IPads....
+  do ->
+    return
+    checkOrientation = undefined
+    checkOrientation = ->
+      viewport = undefined
+      viewport = document.querySelector("meta[name=viewport]")
+      if window.orientation is 90 or window.orientation is -90
+        viewport.setAttribute "content", "width:device-width, initial-scale=1.0, user-scalable=1"
+      else
+        viewport.setAttribute "content", "width:device-width, initial-scale=1.0, user-scalable=1"
+    window.onorientationchange = ->
+      checkOrientation()
+    checkOrientation()
   
   # Load page specific code
   index() if location.pathname.match(/index/) or location.pathname is '/'

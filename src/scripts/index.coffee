@@ -119,7 +119,7 @@ $ ->
                        'webkit'
                      else if navigator.userAgent.match /MSIE/
                        'msie'
-  $('body').addClass 'ipad' if navigator.userAgent.match /iPad/i
+  $('body').addClass 'ios' if navigator.userAgent.match /iPad|iPhone/i
   
   # IPads....
   do ->
